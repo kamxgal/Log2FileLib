@@ -12,6 +12,8 @@ class Log2File
     };
 
 public:
+    Log2File() = default;
+
     Log2File(const std::filesystem::path& filepath);
 
     void open(const std::filesystem::path& filepath);
