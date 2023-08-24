@@ -28,6 +28,8 @@ public:
         messageStream.clear();
         (messageStream << ... << args);
         log(LogLevel::Debug, messageStream.str());
+#else
+    (static_cast<void>(args), ...);
 #endif
     }
 
